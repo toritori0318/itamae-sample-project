@@ -1,5 +1,14 @@
 Itamaeのサンプルプロジェクトです
 
+## 試してみる
+
+```
+git clone https://github.com/toritori0318/itamae-sample-project.git
+cd itamae-sample-project
+
+vagrant up vm_app
+```
+
 ## ディレクトリ構造
 
 ### プロジェクト全体
