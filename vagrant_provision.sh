@@ -10,8 +10,11 @@ fi
 # depends install
 if ! ( gem contents itamae ) < /dev/null > /dev/null 2>&1; then
   echo "- itamae depends library install...."
-  yum install -y centos-release-SCL
+  yum install -y centos-release-SCL epel-release
   yum install -y ruby193 ruby193-ruby-devel git
+  # for centos-release-SCL
+  source /opt/rh/ruby193/enable
+  PATH=/opt/rh/ruby193/root/usr/local/bin:$PATH
 fi
 
 # exec itamae
