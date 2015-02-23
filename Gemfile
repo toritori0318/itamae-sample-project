@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+# 必須
 gem 'json'
 gem 'itamae'
+
+# 外部プラグインなど
 gem 'itamae-plugin-recipe-supervisor', :github => 'toritori0318/itamae-plugin-recipe-supervisor'
 gem 'itamae-plugin-recipe-consul', :github => 'toritori0318/itamae-plugin-recipe-consul'
 
