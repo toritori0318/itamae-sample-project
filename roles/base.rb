@@ -8,4 +8,4 @@
 #include_recipe "company_base:sudo"
 
 # プロジェクト独自のベースレシピ
-include_recipe "../recipes/project_hoge/packages.rb"
+include_recipe "../cookbooks/project_hoge/packages.rb"

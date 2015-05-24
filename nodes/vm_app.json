@@ -11,6 +11,6 @@
   "recipes": [
     "./roles/base.rb",
     "./roles/app.rb",
-    "./recipes/td-agent/install.rb"
+    "./cookbooks/td-agent/install.rb"
   ]
 }
