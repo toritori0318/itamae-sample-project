@@ -15,17 +15,17 @@ vagrant up vm_app
 
 ```
 PROJECT_ROOT/
+  cookbooks/    # クックブック群
   nodes/        # vm毎のnode.json
-  recipes/      # レシピ群
   roles/        # ロール群
   entrypoint.rb # Itamaeから実行されるレシピのエントリポイント(後程説明)
   Gemfile       # Itamaeプラグインなどの依存が書かれたGemfile
 ```
 
-### レシピ毎
+### クックブック毎
 
 ```
-<recipe_name>
+<cookbook_name>
   attributes.rb   # attributesをまとめたファイル
   xxx_recipe.rb   # なんかレシピ
   yyy_recipe.rb   # なんかレシピ
