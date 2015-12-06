@@ -1,20 +1,21 @@
 # args
 vm="vm_app"
 
-# for centos-release-SCL
-if [ -r /opt/rh/ruby193/enable ]; then
-  source /opt/rh/ruby193/enable
-  PATH=/opt/rh/ruby193/root/usr/local/bin:$PATH
-fi
-
-# depends install
-if ! ( gem contents itamae ) < /dev/null > /dev/null 2>&1; then
-  echo "- itamae depends library install...."
+# ruby install
+if ! ( which ruby ) < /dev/null > /dev/null 2>&1; then
+  echo "- ruby and bundler install...."
+  # packages
   yum install -y centos-release-SCL epel-release
-  yum install -y ruby193 ruby193-ruby-devel git
-  # for centos-release-SCL
-  source /opt/rh/ruby193/enable
-  PATH=/opt/rh/ruby193/root/usr/local/bin:$PATH
+  yum install -y wget rpm-build git readline-devel ncurses-devel gdbm-devel openssl-devel libyaml-devel libffi-devel zlib-devel
+  # rpmbuild
+  mkdir -p /root/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
+  wget http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz -P /root/rpmbuild/SOURCES
+  wget https://raw.githubusercontent.com/feedforce/ruby-rpm/master/ruby22x.spec -P /root/rpmbuild/SPECS
+  rpmbuild -bb /root/rpmbuild/SPECS/ruby22x.spec
+  # rpm ruby install
+  rpm -Uvh /root/rpmbuild/RPMS/x86_64/ruby-2.2.3-1.el6.x86_64.rpm
+  # bundler
+  gem install bundler
 fi
 
 # exec itamae
