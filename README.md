@@ -9,7 +9,7 @@ Itamaeのサンプルプロジェクトです（itamae-secretバージョン）
 gem install itamae-secrets
 
 # キーを作成。このプロジェクトのキーは「hoge」です
-itamae-secrets newkey --base=./secret --method=aes-passphrase
+itamae-secrets newkey --method=aes-passphrase
 ```
 
 ### vagrant up
