@@ -5,6 +5,7 @@ Itamaeのサンプルプロジェクトです
 ```
 git clone https://github.com/toritori0318/itamae-sample-project.git
 cd itamae-sample-project
+git checkout environments_version
 
 # environmentsで利用するenvを設定
 export env=development
