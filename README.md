@@ -17,7 +17,10 @@ itamae-secrets newkey --base=./secret --method=aes-passphrase
 ```
 git clone https://github.com/toritori0318/itamae-sample-project.git
 cd itamae-sample-project
+git checkout itamae-secrets-version
 
+# vagrant up
+#  himitsu.rb の実行結果で「blahblahblah」が出力されたら成功！！！
 vagrant up vm_app
 ```
 
