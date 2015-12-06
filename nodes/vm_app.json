@@ -11,6 +11,7 @@
   "recipes": [
     "./roles/base.rb",
     "./roles/app.rb",
-    "./cookbooks/td-agent/install.rb"
+    "./cookbooks/td-agent/install.rb",
+    "./cookbooks/project_hoge/himitsu.rb"
   ]
 }

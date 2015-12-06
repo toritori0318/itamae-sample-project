@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # 必須
 gem 'json'
 gem 'itamae'
+gem 'itamae-secrets'
 
 # 外部プラグインなど
 gem 'itamae-plugin-recipe-supervisor', :github => 'toritori0318/itamae-plugin-recipe-supervisor'

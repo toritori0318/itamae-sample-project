@@ -1,6 +1,18 @@
-Itamaeのサンプルプロジェクトです
+Itamaeのサンプルプロジェクトです（itamae-secretバージョン）
 
 ## 試してみる
+
+### itamae-secrets 事前準備
+
+```
+# itamae-secretsをローカルでインストールしとく
+gem install itamae-secrets
+
+# キーを作成。このプロジェクトのキーは「hoge」です
+itamae-secrets newkey --base=./secret --method=aes-passphrase
+```
+
+### vagrant up
 
 ```
 git clone https://github.com/toritori0318/itamae-sample-project.git
@@ -15,11 +27,13 @@ vagrant up vm_app
 
 ```
 PROJECT_ROOT/
-  cookbooks/    # クックブック群
-  nodes/        # vm毎のnode.json
-  roles/        # ロール群
-  entrypoint.rb # Itamaeから実行されるレシピのエントリポイント(後程説明)
-  Gemfile       # Itamaeプラグインなどの依存が書かれたGemfile
+  cookbooks/          # クックブック群
+  nodes/              # vm毎のnode.json
+  roles/              # ロール群
+  secret/             # itamae-secretsの秘密の入れ物
+  .itamae-secrets.yml # itamae-secrets のディレクトリが指定されるコンフィグファイル
+  entrypoint.rb       # Itamaeから実行されるレシピのエントリポイント(後程説明)
+  Gemfile             # Itamaeプラグインなどの依存が書かれたGemfile
 ```
 
 ### クックブック毎
