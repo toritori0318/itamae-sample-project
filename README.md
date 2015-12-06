@@ -6,6 +6,10 @@ Itamaeのサンプルプロジェクトです
 git clone https://github.com/toritori0318/itamae-sample-project.git
 cd itamae-sample-project
 
+# environmentsで利用するenvを設定
+export env=development
+
+# start vm
 vagrant up vm_app
 ```
 

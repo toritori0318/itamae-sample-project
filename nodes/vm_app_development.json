@@ -1,0 +1,17 @@
+{
+  "td_agent": {
+    "plugins": [
+      "config-expander",
+      "redeliver",
+      "map",
+      "forest",
+      "multi-format-parser"
+    ]
+  },
+  "environment":"./environments/development.rb",
+  "recipes": [
+    "./roles/base.rb",
+    "./roles/app.rb",
+    "./cookbooks/td-agent/install.rb"
+  ]
+}

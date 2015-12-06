@@ -5,7 +5,7 @@ target_repo = "https://github.com/toritori0318/drone-fig-ci-sample.git"
 # create directory
 directory app_root
 
-target_branch = "master"
+target_branch = node['deploy']['revision'] || "master"
 # git pull
 execute "git checkout #{target_branch}" do
   command <<-"EOH"
@@ -23,6 +23,5 @@ else
     git checkout #{target_branch}
 fi
 EOH
-end
 
 # ...

@@ -1,5 +1,5 @@
 # args
-vm="vm_app"
+vm=vm_app_$1
 
 # ruby install
 if ! ( which ruby ) < /dev/null > /dev/null 2>&1; then

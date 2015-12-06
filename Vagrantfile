@@ -14,6 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell" do |s|
       s.path   = "vagrant_provision.sh"
       s.inline = $script
+      s.args   = [ ENV["env"] ]
   end
 
 end

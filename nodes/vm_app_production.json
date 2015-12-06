@@ -8,6 +8,7 @@
       "multi-format-parser"
     ]
   },
+  "environment":"./environments/production.rb",
   "recipes": [
     "./roles/base.rb",
     "./roles/app.rb",
