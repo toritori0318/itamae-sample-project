@@ -23,5 +23,6 @@ else
     git checkout #{target_branch}
 fi
 EOH
+end
 
 # ...
